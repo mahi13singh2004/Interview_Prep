@@ -1,0 +1,7 @@
+class Solution {
+  public:
+    int largest(vector<int> &arr) {
+        int maxi=*max_element(arr.begin(),arr.end());
+        return maxi;
+    }
+};
