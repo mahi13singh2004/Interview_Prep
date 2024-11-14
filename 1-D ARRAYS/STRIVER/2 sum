@@ -1,0 +1,23 @@
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        unordered_map<int,int>mpp;
+        vector<int>ans;
+        int sum=0;
+
+        for(int i=0; i<nums.size(); i++){
+            int sum=nums[i];
+
+            int req=target-sum;
+            if(mpp.find(req)!=mpp.end()){
+                ans.push_back(i);
+                ans.push_back(mpp[req]);
+                break;
+            }
+
+            mpp[sum]=i;
+        }
+
+        return ans;
+    }
+};
